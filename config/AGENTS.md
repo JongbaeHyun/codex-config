@@ -26,6 +26,15 @@ Codex가 모든 프로젝트에서 따르는 기본 지침. **claude-config(Clau
 - 한 작업이 3회 이상 같은 지점에서 막히면 중단·재스코프.
 - 열린 질문·추측으로 내린 결정은 `.claude/decisions-needed.md`에 모아 사람이 일괄 결정·보완하게 한다(Human-on-the-loop).
 
+## 상세 절차 — claude-config 스킬 문서 참조 (복제 금지)
+
+슬래시 스킬 자체는 Claude Code 전용이지만, **절차 문서는 공유 소스**다. Codex가 드라이버일 때 해당 작업이 필요하면 아래를 **직접 읽어** 같은 방식으로 수행한다(claude-config가 설치돼 있을 때 `~/.claude/skills/`에 존재):
+- 자율 완성 플레이북: `~/.claude/skills/autodev/SKILL.md`
+- 교차 모델 리뷰: `~/.claude/skills/xreview/SKILL.md` (단 Codex 드라이버면 "다른 모델"은 `claude -p`·로컬 DeepSeek)
+- 프로젝트 초기화·품질 체계: `~/.claude/skills/project-init/SKILL.md`, `~/.claude/skills/quality-init/SKILL.md`
+
+내용을 **복제하지 않는다** — 단일 소스를 참조한다(두 벌 관리·드리프트 방지).
+
 ## 커밋
 
 - conventional 제목 + 필요시 trailer(Constraint / Rejected / Directive / Confidence / Scope-risk / Not-tested). 사소한 변경엔 생략. 커밋·푸시는 사용자가 요청할 때.
